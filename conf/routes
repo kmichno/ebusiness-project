@@ -1,0 +1,21 @@
+
+# Routes
+# This file defines all application routes (Higher priority routes first)
+
+GET     /                           controllers.ProductController.index
+GET     /product/:id                controllers.ProductController.getProduct(id: Integer)
+GET     /category/:id               controllers.ProductController.getProductsForCategory(id: Integer)
+GET     /products                   controllers.ProductController.getProducts
+POST    /addproduct                controllers.ProductController.addProduct
+
+
+POST    /adduser                    controllers.UserController.addUser
+GET     /getuser/:id                controllers.UserController.getUser(id: Integer)
+GET     /edituser/:id               controllers.UserController.editUser(id: Integer)
+
+
+GET     /order/:id                  controllers.OrderController.getOrder(id: Integer)
+GET     /orders                     controllers.OrderController.getOrders(userId: Integer)
+POST    /takeorder                  controllers.OrderController.takeOrder
+
+      
